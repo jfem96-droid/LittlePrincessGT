@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Little Princess GT</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            <h1>Little Princess GT</h1>
+        </div>
+
+        <nav>
+
+            <a href="#inicio">Inicio</a>
+
+            <a href="#productos">Productos</a>
+
+            <a href="#contacto">Contacto</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-text">
+
+            <h2>
+                Los moños más hermosos para pequeñas princesas
+            </h2>
+
+            <p>
+                Diseños únicos hechos con amor y creatividad.
+            </p>
+
+            <button onclick="irProductos()">
+                Ver Productos
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <main>
+
+        <section class="productos" id="productos">
+
+            <h2>Nuestros Moños</h2>
+
+            <div class="contenedor-productos">
+
+
+                <!-- PRODUCTO 1 -->
+                <div class="card">
+
+                    <img src="images/mono1.jpg"
+                         alt="Moño Rosa">
+
+                    <h3>Moño Rosa Princesa</h3>
+
+                    <p>
+                        Moño elegante color rosa pastel.
+                    </p>
+
+                    <span>Q45</span>
+
+                    <button onclick="comprar('Moño Rosa Princesa')">
+                        Comprar
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUCTO 2 -->
+                <div class="card">
+
+                    <img src="images/mono2.jpg"
+                         alt="Moño Dorado">
+
+                    <h3>Moño Dorado Luxury</h3>
+
+                    <p>
+                        Diseño brillante para ocasiones especiales.
+                    </p>
+
+                    <span>Q55</span>
+
+                    <button onclick="comprar('Moño Dorado Luxury')">
+                        Comprar
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUCTO 3 -->
+                <div class="card">
+
+                    <img src="images/mono3.jpg"
+                         alt="Moño Blanco">
+
+                    <h3>Moño Blanco Angelical</h3>
+
+                    <p>
+                        Diseño delicado y moderno.
+                    </p>
+
+                    <span>Q40</span>
+
+                    <button onclick="comprar('Moño Blanco Angelical')">
+                        Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- BOTÓN WHATSAPP -->
+    <a class="whatsapp"
+       href="https://wa.me/50212345678"
+       target="_blank">
+
+        💬
+
+    </a>
+
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+
+        <p>
+            © 2026 Little Princess GT
+        </p>
+
+        <div class="footer-links">
+
+            <a href="#">Política de Privacidad</a>
+
+            <a href="#">Cookies</a>
+
+            <a href="#">Instagram</a>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
