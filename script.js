@@ -66,8 +66,6 @@ document
 
         cantidad: cantidad,
 
-        color: color,
-
         nombre: nombre,
 
         telefono: telefono,
