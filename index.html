@@ -20,14 +20,23 @@
     <header>
 
         <div class="logo">
+
+            <img src="images/logo.png"
+                 alt="Logo">
+
             <h1>Little Princess GT</h1>
+
         </div>
 
         <nav>
 
             <a href="#inicio">Inicio</a>
 
-            <a href="#productos">Productos</a>
+            <a href="#monos">Moños</a>
+
+            <a href="#accesorios">Accesorios</a>
+
+            <a href="#bolsas">Bolsas</a>
 
             <a href="#contacto">Contacto</a>
 
@@ -42,11 +51,11 @@
         <div class="hero-text">
 
             <h2>
-                Los moños más hermosos para pequeñas princesas
+                Accesorios hermosos para pequeñas princesas
             </h2>
 
             <p>
-                Diseños únicos hechos con amor y creatividad.
+                Diseños únicos llenos de amor y creatividad.
             </p>
 
             <button onclick="irProductos()">
@@ -58,91 +67,216 @@
     </section>
 
 
-    <!-- PRODUCTOS -->
-    <main>
+    <!-- MOÑOS -->
+    <section class="productos" id="monos">
 
-        <section class="productos" id="productos">
+        <h2>Moños</h2>
 
-            <h2>Nuestros Moños</h2>
+        <div class="contenedor-productos">
 
-            <div class="contenedor-productos">
+            <div class="card">
 
+                <img src="images/mono1.jpg"
+                     alt="Moño Azul">
 
-                <!-- PRODUCTO 1 -->
-                <div class="card">
+                <h3>Moño Azul Princesa</h3>
 
-                    <img src="images/mono1.jpg"
-                         alt="Moño Rosa">
+                <p>Elegante y delicado.</p>
 
-                    <h3>Moño Rosa Princesa</h3>
+                <span>Q45</span>
 
-                    <p>
-                        Moño elegante color rosa pastel.
-                    </p>
-
-                    <span>Q45</span>
-
-                    <button onclick="comprar('Moño Rosa Princesa')">
-                        Comprar
-                    </button>
-
-                </div>
-
-
-                <!-- PRODUCTO 2 -->
-                <div class="card">
-
-                    <img src="images/mono2.jpg"
-                         alt="Moño Dorado">
-
-                    <h3>Moño Dorado Luxury</h3>
-
-                    <p>
-                        Diseño brillante para ocasiones especiales.
-                    </p>
-
-                    <span>Q55</span>
-
-                    <button onclick="comprar('Moño Dorado Luxury')">
-                        Comprar
-                    </button>
-
-                </div>
-
-
-                <!-- PRODUCTO 3 -->
-                <div class="card">
-
-                    <img src="images/mono3.jpg"
-                         alt="Moño Blanco">
-
-                    <h3>Moño Blanco Angelical</h3>
-
-                    <p>
-                        Diseño delicado y moderno.
-                    </p>
-
-                    <span>Q40</span>
-
-                    <button onclick="comprar('Moño Blanco Angelical')">
-                        Comprar
-                    </button>
-
-                </div>
+                <button onclick="comprar('Moño Azul Princesa')">
+                    Comprar
+                </button>
 
             </div>
 
-        </section>
 
-    </main>
+            <div class="card">
+
+                <img src="images/mono2.jpg"
+                     alt="Moño Rosado">
+
+                <h3>Moño Rosado Luxury</h3>
+
+                <p>Brillante y moderno.</p>
+
+                <span>Q55</span>
+
+                <button onclick="comprar('Moño Rosado Luxury')">
+                    Comprar
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
-    <!-- BOTÓN WHATSAPP -->
+    <!-- ACCESORIOS -->
+    <section class="productos" id="accesorios">
+
+        <h2>Accesorios</h2>
+
+        <div class="contenedor-productos">
+
+            <div class="card">
+
+                <img src="images/accesorio1.jpg"
+                     alt="Rociadores">
+
+                <h3>Set de Rociadores</h3>
+
+                <p>Accesorios delicados.</p>
+
+                <span>Q65</span>
+
+                <button onclick="comprar('Set de Rociadores')">
+                    Comprar
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="images/accesorio2.jpg"
+                     alt="Peines">
+
+                <h3>Peines para cabello rizado</h3>
+
+                <p>Perfecta para tus colochos.</p>
+
+                <span>Q50</span>
+
+                <button onclick="comprar('Peine cabello rizado')">
+                    Comprar
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOLSAS -->
+    <section class="productos" id="bolsas">
+
+        <h2>Bolsas</h2>
+
+        <div class="contenedor-productos">
+
+            <div class="card">
+
+                <img src="images/bolsa1.jpg"
+                     alt="Bolsas">
+
+                <h3>Set de Bolsas</h3>
+
+                <p>Diseño elegante.</p>
+
+                <span>Q120</span>
+
+                <button onclick="comprar('Set de Bolsas')">
+                    Comprar
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="images/bolsa2.jpg"
+                     alt="Bolsa 2">
+
+                <h3>Bolsa Princesa</h3>
+
+                <p>Hermosa y moderna.</p>
+
+                <span>Q140</span>
+
+                <button onclick="comprar('Bolsa Princesa')">
+                    Comprar
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+
+        <div class="modal-content">
+
+            <span class="cerrar"
+                  onclick="cerrarModal()">
+
+                  &times;
+
+            </span>
+
+            <h2>Finalizar Pedido</h2>
+
+            <form id="pedidoForm">
+
+                <input type="text"
+                       id="nombre"
+                       placeholder="Nombre">
+
+                <input type="text"
+                       id="telefono"
+                       placeholder="Teléfono">
+
+                <input type="text"
+                       id="direccion"
+                       placeholder="Dirección">
+
+                <input type="number"
+                       id="cantidad"
+                       placeholder="Cantidad">
+
+                               <input type="text"
+                       id="cantidad"
+                       placeholder="Color">
+
+                <select id="pago">
+
+                    <option>
+                        Método de pago
+                    </option>
+
+                    <option>
+                        Efectivo
+                    </option>
+
+                    <option>
+                        Transferencia
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    Enviar Pedido
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHATSAPP -->
     <a class="whatsapp"
-       href="https://wa.me/50212345678"
+       href="https://wa.me/50235700133"
        target="_blank">
 
-        💬
+       💬
 
     </a>
 
@@ -150,19 +284,26 @@
     <!-- FOOTER -->
     <footer id="contacto">
 
+        <h3>Síguenos en redes sociales</h3>
+
+        <div class="redes">
+
+            <a href="https://www.instagram.com/littleprincess.gt?igsh=MWZ0NmUxdXY5YmUxeg=="
+               target="_blank">
+               Instagram
+            </a>
+
+
+            <a href="https://wa.me/50235700133"
+               target="_blank">
+               WhatsApp
+            </a>
+
+        </div>
+
         <p>
             © 2026 Little Princess GT
         </p>
-
-        <div class="footer-links">
-
-            <a href="#">Política de Privacidad</a>
-
-            <a href="#">Cookies</a>
-
-            <a href="#">Instagram</a>
-
-        </div>
 
     </footer>
 
