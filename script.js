@@ -1,6 +1,8 @@
+
 let productoSeleccionado = "";
 
 
+// ABRIR MODAL
 function comprar(producto){
 
     productoSeleccionado = producto;
@@ -11,6 +13,7 @@ function comprar(producto){
 }
 
 
+// CERRAR MODAL
 function cerrarModal(){
 
     document
@@ -19,6 +22,7 @@ function cerrarModal(){
 }
 
 
+// IR A PRODUCTOS
 function irProductos(){
 
     document
@@ -26,15 +30,19 @@ function irProductos(){
     .scrollIntoView({
         behavior:"smooth"
     });
+
 }
 
 
+// FORMULARIO
 document
 .getElementById("pedidoForm")
 .addEventListener("submit", async function(e){
 
     e.preventDefault();
 
+
+    // OBTENER DATOS
     let nombre =
     document.getElementById("nombre").value;
 
@@ -51,11 +59,14 @@ document
     document.getElementById("pago").value;
 
 
+    // OBJETO DATOS
     let datos = {
 
         producto: productoSeleccionado,
 
         cantidad: cantidad,
+
+        color: color,
 
         nombre: nombre,
 
@@ -64,26 +75,32 @@ document
         direccion: direccion,
 
         pago: pago
+
     };
 
 
-    // URL DE APPS SCRIPT
+    // URL APPS SCRIPT
     let apiURL =
     "https://script.google.com/macros/s/AKfycbxUjscDJVnUk1Dzc7eOkm1NwVrGEDa8XV8TGu4nQW2VLIOF2duS-Ph8ECDbn2P5B8s0/exec";
 
 
-    // ENVIAR A GOOGLE SHEETS
-    await fetch(apiURL, {
-
-        method:"POST",
-
-        body: JSON.stringify(datos)
-
-    });
+    try{
 
 
-    // MENSAJE WHATSAPP
-    let mensaje =
+        // ENVIAR A GOOGLE SHEETS
+        await fetch(apiURL, {
+
+            method: "POST",
+
+            mode: "no-cors",
+
+            body: JSON.stringify(datos)
+
+        });
+
+
+        // MENSAJE WHATSAPP
+        let mensaje =
 `Hola Little Princess GT 👑
 
 Nuevo Pedido:
@@ -101,17 +118,38 @@ Dirección: ${direccion}
 Método de pago: ${pago}`;
 
 
-    let url =
-    "https://wa.me/50212345678?text=" +
-    encodeURIComponent(mensaje);
+        // TU NÚMERO
+        let url =
+        "https://wa.me/50235700133?text=" +
+        encodeURIComponent(mensaje);
 
 
-    window.open(url, "_blank");
+        // ABRIR WHATSAPP
+        window.open(url, "_blank");
 
 
-    alert("Pedido enviado correctamente");
+        // ALERTA
+        alert("Pedido enviado correctamente");
 
 
-    cerrarModal();
+        // CERRAR MODAL
+        cerrarModal();
+
+
+        // LIMPIAR FORMULARIO
+        document
+        .getElementById("pedidoForm")
+        .reset();
+
+    }
+
+
+    catch(error){
+
+        console.error(error);
+
+        alert("Error al enviar pedido");
+
+    }
 
 });
