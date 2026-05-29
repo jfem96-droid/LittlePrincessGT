@@ -79,23 +79,34 @@ document
 
     // URL APPS SCRIPT
     let apiURL =
-    "https://script.google.com/macros/s/AKfycbxUjscDJVnUk1Dzc7eOkm1NwVrGEDa8XV8TGu4nQW2VLIOF2duS-Ph8ECDbn2P5B8s0/exec";
+    "https://script.google.com/macros/s/AKfycbwJNUqWO7xiW1W4TGpA_VRO5PboTaGMq67yVPek23pUnFYT61od9yK5v_9ymeREUkS8/exec";
 
 
     try{
 
 
-        // ENVIAR A GOOGLE SHEETS
-        await fetch(apiURL, {
+// ENVIAR A GOOGLE SHEETS
+try {
 
-            method: "POST",
+    const response = await fetch(apiURL, {
 
-            mode: "no-cors",
+        method: "POST",
 
-            body: JSON.stringify(datos)
+        body: JSON.stringify(datos),
 
-        });
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+        }
 
+    });
+
+    console.log("Enviado correctamente");
+
+} catch(error){
+
+    console.error("ERROR FETCH:", error);
+
+}
 
         // MENSAJE WHATSAPP
         let mensaje =
