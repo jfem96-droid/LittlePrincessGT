@@ -79,9 +79,7 @@ document
 
     // URL APPS SCRIPT
     let apiURL =
-    "https://script.google.com/macros/s/AKfycbwJNUqWO7xiW1W4TGpA_VRO5PboTaGMq67yVPek23pUnFYT61od9yK5v_9ymeREUkS8/exec";
-
-
+    "https://script.google.com/macros/s/AKfycby7wsij-v70Tg407yC0q94kDn9yDft4EJ6ACrZ0veCadhPQws60ZJg8sWw-BBeAsgXY/exec"
     try{
 
 
